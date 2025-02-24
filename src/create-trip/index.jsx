@@ -175,7 +175,7 @@ const GetUserProfile = (tokenInfo) => {
           <h2 className="text-xl my-1 font-medium">
             The Budget is exclusively allocated for activities and dining purposes.
           </h2>
-          <div className="grid grid-cols-3 gap-5 mt-5">
+          <div className="grid sm:grid-cols-3 gap-5 mt-5">
             {SelectBudgetOptions.map((item, index) => (
               <div
                 onClick={() => handleInputChange("budget", item.title)}
@@ -195,7 +195,7 @@ const GetUserProfile = (tokenInfo) => {
         {/* Travel Companions Selection */}
         <div>
           <h2 className="text-xl my-1 font-medium">Who do you plan on traveling with?</h2>
-          <div className="grid grid-cols-3 gap-5 mt-5">
+          <div className="grid sm:grid-cols-3 gap-5 mt-5">
             {SelectTravelsList.map((item, index) => (
               <div
                 onClick={() => handleInputChange("noOfPeople", item.people)}

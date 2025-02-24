@@ -33,12 +33,12 @@ const InformationSection = ({ trip }) => {
  
   return (
     <div>
-      <img src={photoUrl?photoUrl:'/placeholder.jpg'} className="h-[340px] w-full object-cover rounded" />
+      <img src={photoUrl?photoUrl:'/placeholder.jpg'} className="sm:h-[340px] w-full sm:object-cover rounded  object-contain h-fit " />
       <div className="flex justify-between items-center">
-        <div className="my-5 flex flex-col gap-2">
-          <h2 className="font-bold text-2xl">{trip?.userSelection?.location?.label}</h2>
+        <div className="sm:my-5 flex flex-col gap-2">
+          <h2 className="font-bold text-2xl sm:text-left text-center">{trip?.userSelection?.location?.label}</h2>
 
-          <div className="flex gap-5">
+          <div className="sm:flex gap-5 grid ">
             <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-md">
               🗓 {trip?.userSelection?.noOfDays} Day
             </h2>

@@ -31,10 +31,10 @@ const PlaceCardItem = ({ place }) => {
 
   return (
     <Link to={'https:www.google.com/maps/search/?api=1&query='+ place.placeName} target='_blank'>
-    <div className="border p-3 rounded-xl mt-2 flex items-start gap-4 hover:scale-105 transition-all hover:shadow-md cursor-pointer">
-      <img src={photoUrl?photoUrl:'/placeholder.jpg'} alt="Place" className="w-[130px] h-[130px] rounded-xl object-cover" />
+    <div className="border p-2 rounded-xl mt-2  sm:flex items-start gap-4 hover:scale-105 transition-all hover:shadow-md cursor-pointer">
+      <img src={photoUrl?photoUrl:'/placeholder.jpg'} alt="Place" className="sm:w-[130px] h-[130px] rounded-xl object-cover   w-full" />
       
-      <div className="flex-1">
+      <div className="sm:flex-1 grid ">
         <h2 className="font-bold text-lg">{place.placeName}</h2>
         <p className="text-sm text-gray-600">{place.placeDetails}</p>
         <div className='flex items-center justify-between'>

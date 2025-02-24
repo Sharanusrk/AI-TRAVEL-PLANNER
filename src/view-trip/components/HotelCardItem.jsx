@@ -30,13 +30,13 @@ const HotelCardItem = ({hotel ,index}) => {
           to={'https://www.google.com/maps/search/?api=1&query=' + hotel.hotelName + "," + hotel?.hotelAddress} 
           target='_blank'
         >
-          <div className='hover:scale-110 transition-all cursor-pointer'>
+          <div className='hover:scale-110 transition-all cursor-pointer  bg-gray-200 rounded-lg'>
             <img src={photoUrl?photoUrl:'/placeholder.jpg'} className='rounded-lg h-[180px] w-full object-c' /> 
             <div className='my-2 flex flex-col gap-2'>
-              <h2 className='font-medium'>{hotel?.hotelName}</h2>
-              <h2 className='text-xs text-gray-500'>📍{hotel?.hotelAddress}</h2>
-              <h2 className='text-sm'>💸 {hotel?.price}</h2>
-              <h2 className='text-sm'>⭐ {hotel?.rating}</h2>
+              <h2 className='font-medium text-center sm:text-left p-0.5 '>{hotel?.hotelName}</h2>
+              <h2 className='text-xs text-gray-500 p-1 '>📍{hotel?.hotelAddress}</h2>
+              <h2 className='text-sm p-1'>💸 {hotel?.price}</h2>
+              <h2 className='text-sm p-1'>⭐ {hotel?.rating}</h2>
             </div>
           </div>
         </Link>
