@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
-import Input from "../Components/ui/input";
+import Input from "../Components/ui/Input";
 import { AI_PROMPT, SelectBudgetOptions, SelectTravelsList } from "../constants/options";
 import Button from "../Components/ui/Button";
 import Toast from "../Components/ui/Toast";
