@@ -68,7 +68,7 @@ const Header = () => {
           />
         </a>
         <h1 className="text-center sm:text-left sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-950 via-purple-900 to-pink-600 animate-gradient-move bg-[200%] text-2xl">
-          TravelGenie
+          SHARAN RE KALBURAGI
         </h1>
       </div>
 
