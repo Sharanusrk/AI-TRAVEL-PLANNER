@@ -4,27 +4,38 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="flex items-center sm:mx-56 gap-4 flex-col">
-      <h1 className=" font-extrabold sm:text-[55px] text-center mt-16 mb-4 text-[35px]">
-       <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"> Discover Your Next Adventure with AI:</span>
-       <br /> Personalized Itineraries at Your
-        Fingertips
-      </h1>
-    <br />
-      <p className="sm:text-2xl text-gray-500 text-center text-xl ">Your Personal trip planner and travel curator, creating custom Itineraries tailored to your interests and budget</p>
-       
-      <Link to={'/create-trip'}>
-      <Button className="text-sm mt-5 "> Get Started</Button></Link>
+    <div className="relative h-screen w-full overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/new-background.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-      <img 
-  src="image.png" 
-  className="hidden sm:block sm:mt-35 sm:scale-180 sm:w-[75vh] sm:h-[50vh] mt-19 scale-100 w-[45vh] h-[45vh] " 
-  alt="" 
-/>
+      {/* Overlay Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+        <h1 className="font-extrabold sm:text-[55px] text-[35px]">
+          <span className="bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+            Discover Your Next Adventure with AI
+          </span>
+          <br /> Personalized Itineraries at Your Fingertips
+        </h1>
+        <p className="sm:text-2xl text-gray-200 mt-4">
+          Your personal trip planner and travel curator
+        </p>
+        <Link to={"/create-trip"}>
+          <Button className="text-sm mt-5">Get Started</Button>
+        </Link>
 
+        {/* Optional foreground image (if you still want it) */}
+        {/* <img src="image.png" alt="" className="hidden sm:block mt-5 w-[45vh]" /> */}
+      </div>
     </div>
-
-
   );
 };
 
