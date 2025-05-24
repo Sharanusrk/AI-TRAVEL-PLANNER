@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../ui/Button";
 import { Link } from "react-router-dom";
+import { FiLink } from "react-icons/fi"; // Icon import
 
 const Hero = () => {
   return (
@@ -28,11 +29,23 @@ const Hero = () => {
         <p className="sm:text-2xl text-gray-200 mt-4">
           Your personal trip planner and travel curator
         </p>
+
         <Link to={"/create-trip"}>
           <Button className="text-sm mt-5">Get Started</Button>
         </Link>
 
-        {/* Optional foreground image (if you still want it) */}
+        {/* Linktree Button */}
+        <a
+          href="https://linktr.ee/Srk_sharan"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-xl shadow hover:bg-purple-700 transition"
+        >
+          <FiLink />
+          Visit My Profiles
+        </a>
+
+        {/* Optional foreground image */}
         {/* <img src="image.png" alt="" className="hidden sm:block mt-5 w-[45vh]" /> */}
       </div>
     </div>
